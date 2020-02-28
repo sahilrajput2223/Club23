@@ -1,0 +1,84 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block 'content' %}
+
+<!--// SubHeader //-->
+        <div class="ritekhela-subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="ritekhela-breadcrumb">
+                            <li><a href="{% url 'Club:home' %}">Home</a></li>
+                            <li>Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// SubHeader //-->
+
+        <!--// Content //-->
+        <div class="ritekhela-main-content">
+
+            <!--// Main Section //-->
+            <div class="ritekhela-main-section ritekhela-contact-map-full">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <!--// Full Section //-->
+                        <div class="ritekhela-contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.70717629834!2d72.43965473600079!3d23.020497771543955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1582910089727!5m2!1sen!2sin" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                        <!--// Full Section //-->
+
+                    </div>
+                </div>
+            </div>
+            <!--// Main Section //-->
+
+            <!--// Main Section //-->
+            <div class="ritekhela-main-section ritekhela-fixture-list-full">
+                <div class="container">
+                    <div class="row">
+
+                        <!--// Full Section //-->
+                        <div class="col-md-12">
+                            <div class="ritekhela-fancy-title-two">
+                                <h2>Contact Information</h2>
+                            </div>
+                            <div class="ritekhela-contact-list">
+                                <ul class="row">
+                                    <li class="col-md-3">
+                                        <i class="fa fa-phone"></i>
+                                        <span>+087 123 567 889</span>
+                                        <span>+045 123 567 489</span>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="#">info@example.com</a>
+                                        <a href="#">info@exampletwo.com</a>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>International Noel Nawab Street Los Alamitos CA 90720, USAE</span>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <i class="fa fa-fax"></i>
+                                        <a href="#">Fax: (800) 123 4567 89</a>
+                                        <a href="#">(800) 123 4567 89</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!--// Full Section //-->
+
+                    </div>
+                </div>
+            </div>
+            <!--// Main Section //-->
+
+        </div>
+        <!--// Content //-->
+
+{% endblock %}

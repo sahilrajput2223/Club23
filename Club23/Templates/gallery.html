@@ -1,0 +1,86 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block 'content' %}
+
+
+        <!--// SubHeader //-->
+        <div class="ritekhela-subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="ritekhela-breadcrumb">
+                            <li><a href="{% url 'Club:home' %}">Home</a></li>
+                            <li>Gallery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// SubHeader //-->
+
+        <!--// Content //-->
+        <div class="ritekhela-main-content">
+
+            <!--// Main Section //-->
+            <div class="ritekhela-main-section ritekhela-fixture-list-full">
+                <div class="container">
+                    <div class="row">
+
+                        <!--// Full Section //-->
+                        <div class="col-md-12">
+                      <!--// Gallery //-->
+                            <div class="ritekhela-gallery ritekhela-gallery-view1">
+                                <ul class="row">
+                                    <li class="col-md-4" >
+                                        <figure >
+                                            <a data-fancybox-group="group" href="{% static 'extra-images/main2.jpg' %}" class="fancybox"><img src="{% static 'extra-images/main2.jpg' %}" alt=""> <i class="fa fa-plus ritekhela-bgcolor"></i> </a>
+                                        </figure>
+                                        <h2>Main Building</h2>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a data-fancybox-group="group" href="{% static 'extra-images/gym.jpg' %}" class="fancybox"><img src="{% static 'extra-images/gym.jpg' %}" alt=""> <i class="fa fa-plus ritekhela-bgcolor"></i> </a>
+                                        </figure>
+                                        <h2>Gym</h2>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a data-fancybox-group="group" href="{% static 'extra-images/tennis.jpg' %}" class="fancybox"><img src="{% static 'extra-images/tennis.jpg' %}" alt=""> <i class="fa fa-plus ritekhela-bgcolor"></i> </a>
+                                        </figure>
+                                        <h2>Tennis court</h2>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a data-fancybox-group="group" href="{% static 'extra-images/pool.jpg' %}" class="fancybox"><img src="{% static 'extra-images/pool.jpg' %}" alt=""> <i class="fa fa-plus ritekhela-bgcolor"></i> </a>
+                                        </figure>
+                                        <h2>Swimming pool</h2>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a data-fancybox-group="group" href="{% static 'extra-images/basketbal.jpg' %}" class="fancybox"><img src="{% static 'extra-images/basketbal.jpg' %}" alt=""> <i class="fa fa-plus ritekhela-bgcolor"></i> </a>
+                                        </figure>
+                                        <h2>Basket-ball court</h2>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a data-fancybox-group="group" href="{% static 'extra-images/garden.jpg' %}" class="fancybox"><img src="{% static 'extra-images/garden.jpg' %}" alt=""> <i class="fa fa-plus ritekhela-bgcolor"></i> </a>
+                                        </figure>
+                                        <h2>Garden</h2>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--// Gallery //-->
+
+                        </div>
+                        <!--// Full Section //-->
+
+                    </div>
+                </div>
+            </div>
+            <!--// Main Section //-->
+
+        </div>
+        <!--// Content //-->
+
+
+{% endblock %}

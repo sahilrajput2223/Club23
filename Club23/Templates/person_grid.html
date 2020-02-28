@@ -1,0 +1,91 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block 'content' %}
+
+        <!--// SubHeader //-->
+        <div class="ritekhela-subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="ritekhela-breadcrumb">
+                            <li><a href="{% url 'Club:home' %}">Home</a></li>
+                            <li>Person</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// SubHeader //-->
+
+
+        <!--// Content //-->
+        <div class="ritekhela-main-content">
+
+            <!--// Main Section //-->
+            <div class="ritekhela-main-section ritekhela-fixture-slider-full">
+                <div class="container">
+                    <div class="row">
+                         <!--// Player //-->
+                            <div class="ritekhela-team ritekhela-team-view1">
+                                <ul class="row">
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="#"><img src="{% static 'extra-images/person.jpg' %}" alt=""></a>
+                                            <figcaption>
+                                                <a href="#" class="fab fa-facebook-f"></a>
+                                                <a href="#" class="fab fa-twitter"></a>
+                                                <a href="#" class="fab fa-instagram"></a>
+                                                <a href="#" class="fab fa-linkedin"></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="ritekhela-team-view1-text">
+                                            <h2><a href="#">Sahil</a></h2>
+                                            <span>Founder</span>
+                                            <p>Lorem ipsum dolor sit met, con etur adipiscing elit. Ut c males ante.</p>
+                                            <!--<a href="#" class="ritekhela-team-view1-btn">Read More <i class="fa fa-angle-right"></i></a>-->
+                                        </div>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="#"><img src="{% static 'extra-images/person.jpg' %}" alt=""></a>
+                                            <figcaption>
+                                                <a href="#" class="fab fa-facebook-f"></a>
+                                                <a href="#" class="fab fa-twitter"></a>
+                                                <a href="#" class="fab fa-instagram"></a>
+                                                <a href="#" class="fab fa-linkedin"></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="ritekhela-team-view1-text">
+                                            <h2><a href="#">Zeel</a></h2>
+                                            <span>Co-founder</span>
+                                            <p>Lorem ipsum dolor sit met, con etur adipiscing elit. Ut c males ante.</p>
+                                            <!--<a href="#" class="ritekhela-team-view1-btn">Read More <i class="fa fa-angle-right"></i></a>-->
+                                        </div>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <figure>
+                                            <a href="#"><img src="{% static 'extra-images/person.jpg' %}" alt=""></a>
+                                            <figcaption>
+                                                <a href="#" class="fab fa-facebook-f"></a>
+                                                <a href="#" class="fab fa-twitter"></a>
+                                                <a href="#" class="fab fa-instagram"></a>
+                                                <a href="#" class="fab fa-linkedin"></a>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="ritekhela-team-view1-text">
+                                            <h2><a href="#">Shivani</a></h2>
+                                            <span>Co-founder</span>
+                                            <p>Lorem ipsum dolor sit met, con etur adipiscing elit. Ut c males ante.</p>
+                                           <!-- <a href="#" class="ritekhela-team-view1-btn">Read More <i class="fa fa-angle-right"></i></a>-->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--// Player //-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}
