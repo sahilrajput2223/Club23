@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Club23</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo.png' %}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
@@ -45,7 +46,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="index.html" class="ritekhela-logo"><img src="{% static 'images/logo.png' %}" alt=""></a>
+                            <a href="{% url 'Club:home' %}" class="ritekhela-logo"><p style="color:#ffdc11; font-size:35px;">C l u b <span style="color:white;">_</span> 2 3</p></a>
                             <div class="ritekhela-right-section">
                                 <div class="ritekhela-navigation">
                                     <span class="ritekhela-menu-link">
@@ -55,86 +56,17 @@
                                     </span>
                                     <nav id="main-nav">
                                         <ul id="main-menu" class="sm sm-blue">
-                                            <li class="active"><a href="index.html">Home</a>
+                                            <li class="active"><a href="{% url 'Club:home' %}">Home</a>
                                             </li>
-                                            <li class="megamenu-wrap"><a href="#">Features</a>
-                                                <ul class="ritekhela-megamenu">
-                                                   <li class="row">
-                                                      <div class="col-md-3">
-                                                         <h4>Link 1</h4>
-                                                         <div class="ritekhela-megalist">
-                                                            <div class="list"><a href="all-fixture.html">All Matches</a></div>
-                                                            <div class="list"><a href="fixture-list.html">Fixture List</a></div>
-                                                            <div class="list"><a href="fixture-grid.html">Fixture Grid</a></div>
-                                                            <div class="list"><a href="fullstanding.html">Full Standing</a></div>
-                                                            <div class="list"><a href="fixture-detail.html">Fixture Detail</a></div>
-                                                            <div class="list"><a href="gallery-classic.html">Gallery Classic 4Column</a></div>
-                                                         </div>
-                                                      </div>
-                                                      <div class="col-md-3">
-                                                         <h4>Link 2</h4>
-                                                         <div class="ritekhela-megalist">
-                                                            <div class="list"><a href="gallery-classic-3column.html">Gallery Classic 3Column</a></div>
-                                                            <div class="list"><a href="gallery-simple.html">Gallery Simple 4Column</a></div>
-                                                            <div class="list"><a href="gallery-simple-3column.html">Gallery Simple 3Column</a></div>
-                                                            <div class="list"><a href="search-result.html">Search Result</a></div>
-                                                            <div class="list"><a href="404.html">404 Page</a></div>
-                                                            <div class="list"><a href="contact-us.html">Contact Us</a></div>
-                                                         </div>
-                                                      </div>
-                                                      <div class="col-md-6 ritekhela-megamenu-thumb">
-                                                         <img src="{% static 'extra-images/megamenu-frame.jpg' %}" alt="">
-                                                      </div>
-                                                   </li>
-                                                </ul>
+                                            <li class="megamenu-wrap"><a href="{% url 'Club:gallery' %}">Photos</a>
                                             </li>
-                                            <li><a href="#">Players</a>
-                                                <ul>
-                                                    <li><a href="player-grid.html">Player Grid</a></li>
-                                                    <li><a href="#">Player Medium</a>
-                                                        <ul>
-                                                            <li><a href="player-medium-wrsb.html">Player Medium W/R/S</a></li>
-                                                            <li><a href="player-medium-wlsb.html">Player Medium W/L/S</a></li>
-                                                            <li><a href="player-medium-full.html">Player Medium W/O/S</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="player-detail.html">Player Detail</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Our News</a>
-                                                <ul>
-                                                    <li><a href="#">Blog Grid</a>
-                                                        <ul>
-                                                            <li><a href="blog-grid.html">Blog Grid W/O/S</a></li>
-                                                            <li><a href="blog-grid-wlsb.html">Blog Grid W/L/S</a></li>
-                                                            <li><a href="blog-grid-wrsb.html">Blog Grid W/R/S</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">Blog Large</a>
-                                                        <ul>
-                                                            <li><a href="blog-large.html">Blog Large W/O/S</a></li>
-                                                            <li><a href="blog-large-wlsb.html">Blog Large W/L/S</a></li>
-                                                            <li><a href="blog-large-wrsb.html">Blog Large W/R/S</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">Blog Detail</a>
-                                                        <ul>
-                                                            <li><a href="blog-detail.html">Blog Detail W/Thumb</a></li>
-                                                            <li><a href="blog-detail-waudio.html">Blog W/SounCloud</a></li>
-                                                            <li><a href="blog-detail-wvideo.html">Blog Detail W/Video</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Our Shop</a>
-                                                <ul>
-                                                    <li><a href="shop-grid.html">Shop Grid W/O/S</a></li>
-                                                    <li><a href="shop-grid-wlsb.html">Shop Grid W/L/S</a></li>
-                                                    <li><a href="shop-grid-wrsb.html">Shop Grid W/R/S</a></li>
-                                                    <li><a href="shop-detail.html">Shop Detail</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                            <li><a href="{% url 'Club:person' %}">Person</a></li>
+                                            <li><a href="{% url 'Club:bookclub' %}">Book-Club</a></li>
+                                            <li><a href="{% url 'Club:contact_us' %}">Contact Us</a></li>
+                                            <li><a href="{% url 'account_signup' %}" >Sign-up</a></li>
+                                            <li><a href="{% url 'account_login' %}">Log-in</a></li>
+                                            <li><a href="{% url 'account_logout' %}">Log-out</a></li>
+
                                         </ul>
                                     </nav>
                                 </div>
@@ -166,7 +98,7 @@
                 <div class="container">
                     <div class="row">
                         <aside class="widget col-md-6 widget_about_info">
-                            <a href="index.html"><img src="{% static 'images/logo.png' %}" alt=""></a>
+                            <a href="{% url 'Club:home' %}"><p style="color:#ffdc11; font-size:35px;">C l u b <span style="color:white;">_</span> 2 3</p></a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elUt ac malesuada ante.Sed gravida, ur quis tempus sollicitudin, tellus urna</p>
                             <div class="widget_about_info_social">
                                 <a href="#" class="fab fa-facebook-f"></a>
@@ -207,7 +139,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p>Copyright by @Culb23 </p>
+                            <p>Copyright by @Culb23 & Sahil Rajput</p>
                             <a href="#" class="ritekhela-back-top"><i class="fa fa-angle-up"></i></a>
                         </div>
                     </div>
@@ -220,81 +152,6 @@
 
     </div>
 
-
-    <!--// Login ModalBox //-->
-    <div class="loginmodalbox modal fade" id="ritekhelamodalcenter" tabindex="-1">
-       <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-             <div class="modal-body ritekhela-bgcolor-two">
-                <h5 class="modal-title">Login To Your Account</h5>
-                <a href="#" class="close ritekhela-bgcolor-two" data-dismiss="modal" aria-label="Close">
-                    <i class="fa fa-times"></i>
-                </a>
-                <form class="loginmodalbox-search">
-                    <input type="text" value="Enter User Name" onblur="if(this.value == '') { this.value ='Enter User Name'; }" onfocus="if(this.value =='Enter User Name') { this.value = ''; }">
-                    <input type="text" value="Type Here Password" onblur="if(this.value == '') { this.value ='Type Here Password'; }" onfocus="if(this.value =='Type Here Password') { this.value = ''; }">
-                    <input type="submit" value="Login Now" class="ritekhela-bgcolor">
-                    <a href="#" class="loginmodalbox-forget">Forget Password?</a>
-                </form>
-                <div class="ritekhela-loginbox-social">
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin-in"></i> Linkedin</a></li>
-                        <li class="dribbble"><a href="#"><i class="fab fa-dribbble"></i> Dribbble</a></li>
-                    </ul>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-
-    <!--// Login ModalBox //-->
-    <div class="loginmodalbox modal fade" id="ritekhelamodalrg" tabindex="-1">
-       <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-             <div class="modal-body ritekhela-bgcolor-two">
-                <h5 class="modal-title">Sign Up Now</h5>
-                <a href="#" class="close ritekhela-bgcolor-two" data-dismiss="modal" aria-label="Close">
-                    <i class="fa fa-times"></i>
-                </a>
-                <form class="loginmodalbox-search">
-                    <input type="text" value="Enter User Name" onblur="if(this.value == '') { this.value ='Enter User Name'; }" onfocus="if(this.value =='Enter User Name') { this.value = ''; }">
-                    <input type="text" value="Type Your Password" onblur="if(this.value == '') { this.value ='Type Your Password'; }" onfocus="if(this.value =='Type Your Password') { this.value = ''; }">
-                    <input type="text" value="Confirm your password" onblur="if(this.value == '') { this.value ='Confirm your password'; }" onfocus="if(this.value =='Confirm your password') { this.value = ''; }">
-                    <input type="submit" value="Sign Up" class="ritekhela-bgcolor">
-                    <a href="#" class="loginmodalbox-forget">Forget Password?</a>
-                </form>
-                <div class="ritekhela-loginbox-social">
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li class="linkedin"><a href="#"><i class="fab fa-linkedin-in"></i> Linkedin</a></li>
-                        <li class="dribbble"><a href="#"><i class="fab fa-dribbble"></i> Dribbble</a></li>
-                    </ul>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-
-    <!--// Search ModalBox //-->
-    <div class="loginmodalbox modal fade" id="ritekhelamodalsearch" tabindex="-1">
-       <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-             <div class="modal-body ritekhela-bgcolor-two">
-                <h5 class="modal-title">Search Here</h5>
-                <a href="#" class="close ritekhela-bgcolor-two" data-dismiss="modal" aria-label="Close">
-                    <i class="fa fa-times"></i>
-                </a>
-                <form>
-                    <input type="text" value="Search Here Now" onblur="if(this.value == '') { this.value ='Search Here Now'; }" onfocus="if(this.value =='Search Here Now') { this.value = ''; }">
-                    <input type="submit" value="Search Now" class="ritekhela-bgcolor">
-                </form>
-             </div>
-          </div>
-       </div>
-    </div>
 
 
     <!-- jQuery -->
