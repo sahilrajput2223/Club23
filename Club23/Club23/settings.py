@@ -139,8 +139,8 @@ if DEBUG:
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'jobseeker0205@gmail.com'
-EMAIL_HOST_PASSWORD = 'jobportal'
+EMAIL_HOST_USER = '**** YOUR_EMAIL_ID ****'
+EMAIL_HOST_PASSWORD = '**** YOUR_EMAIL_ID_PASSWORD ****'
 EMAIL_PORT = 587
 
 
