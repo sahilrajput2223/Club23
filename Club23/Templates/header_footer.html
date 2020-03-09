@@ -63,10 +63,13 @@
                                             <li><a href="{% url 'Club:person' %}">Person</a></li>
                                             <li><a href="{% url 'Club:bookclub' %}">Book-Club</a></li>
                                             <li><a href="{% url 'Club:contact_us' %}">Contact Us</a></li>
-                                            <li><a href="{% url 'account_signup' %}" >Sign-up</a></li>
+                                        {% if request.user.username == "" %}
                                             <li><a href="{% url 'account_login' %}">Log-in</a></li>
+                                        {% else %}
+                                            <li><a href="{% url 'account_logout' %}">{{ request.user.username }}</a></li>
                                             <li><a href="{% url 'account_logout' %}">Log-out</a></li>
 
+                                        {% endif %}
                                         </ul>
                                     </nav>
                                 </div>
