@@ -1,0 +1,78 @@
+{% extends 'header_footer.html' %}
+
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block 'content' %}
+    <div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <br>
+                <h1>All News</h1>
+            </center>
+        </div>
+        <div class="col-md-12">
+            <br>
+        </div>
+
+        <div class="col-md-2">
+
+        </div>
+
+        <div class="col-md-2">
+           <center>
+               <h1> Occasion </h1>
+           </center>
+        </div>
+        <div class="col-md-2">
+            <center>
+                <b style="font-size:18px; margin-top:1%;"> NEWS </b>
+            </center>
+        </div>
+        <div class="col-md-2">
+            <center>
+                <b style="font-size:18px; margin-top:1%;"> Date </b>
+            </center>
+        </div>
+        <div class="col-md-2">
+            <center>
+                <b style="font-size:18px; margin-top:1%;"> Time </b>
+            </center>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-12">
+            <br>
+        </div>
+        {% for i in data %}
+
+        <div class="col-md-2">
+
+        </div>
+
+        <div class="col-md-2">
+            <h4> {{ i.Occasion }}: </h4>
+        </div>
+        <div class="col-md-2">
+            <p style="font-size:18px; margin-top:1%;"> {{ i.Bio }}</p>
+        </div>
+        <div class="col-md-2">
+            <p style="font-size:18px; margin-top:1%;"> Date: {{ i.Date }} </p>
+        </div>
+        <div class="col-md-2">
+            <p style="font-size:18px; margin-top:1%;"> Time: {{ i.Time }} </p>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-12">
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}

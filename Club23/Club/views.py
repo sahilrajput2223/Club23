@@ -3,6 +3,8 @@ from .forms import Bookclub_from
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.core.mail import send_mail
+from .models import News
+
 # Create your views here.
 def Home(request):
     temp ="index.html"
@@ -29,21 +31,22 @@ def Bookclub_view(request):
             booking_form.Occasion = occasion
             booking_form.Price = price
             booking_form.person = person
-            price = booking_form.Venu.split("|")
+            p = booking_form.Venu.split("|")
             subject = "Club23"
-            message = "Hello, " + request.user.username + ". Welcome To Club23. Your booking date" + request.POST.get('Date_from') + " on " + request.POST.get('Time_from') + " at club23 " + price[0] + " . Your venu price for one day is " + price[1] + "rs."
+            message = "Hello, " + request.user.username + ". Welcome To Club23. Your booking date" + request.POST.get(
+                'Date_from') + " on " + request.POST.get('Time_from') + " at club23 " + p[
+                          0] + " . Your venu price for one day is " + price + "rs."
             email_from = settings.EMAIL_HOST_USER
             email_to = [email, ]
             send_mail(subject, message, email_from, email_to)
 
-            v = price[0],
-            p = price[1]
+            v = p[0],
 
             request.session["v"] = v
-            request.session["p"] = p
+            request.session["p"] = price
 
             booking_form.save()
-            return redirect('Club:checkout') #need to complete
+            return redirect('Club:checkout')  # need to complete
     else:
         form = Bookclub_from()
     return render(request,temp, {'BookClub_from':form})
@@ -65,3 +68,25 @@ def checkout(request, **kwargs):
 
 def faq(request):
     return render(request, 'faq.html')
+
+def birthdate(request):
+    return render(request, 'birthdate.html')
+
+def marriage(request):
+    return render(request, 'marriage.html')
+
+def farewell(request):
+    return render(request, 'farewell.html')
+
+def reception(request):
+    return render(request, 'reception.html')
+
+def party(request):
+    return render(request, 'party.html')
+
+def wedding(request):
+    return render(request, 'wedding.html')
+
+def all_news(request):
+    data = News.objects.all()
+    return render(request, 'all_news.html', {'data':data})

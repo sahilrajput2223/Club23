@@ -26,3 +26,12 @@ class Payment(models.Model):
         return self.u_name
 
 
+class News(models.Model):
+    Occasion = models.CharField(max_length=10)
+    Bio = models.TextField()
+    Date = models.DateField()
+    Time = models.TimeField()
+
+    def __str__(self):
+        return self.Occasion
+
