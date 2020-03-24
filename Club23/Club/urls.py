@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import Home, Bookclub_view, Gallery, Person_grid, Contact_us
+from .views import Home, Bookclub_view, Gallery, Person_grid, Contact_us, checkout, faq
 app_name='Club'
 
 urlpatterns = [
@@ -8,5 +8,7 @@ urlpatterns = [
     path('gallery', Gallery, name="gallery"),
     path('person', Person_grid, name="person"),
     path('contact_us', Contact_us, name="contact_us"),
+    path('checkout', checkout, name="checkout"),
+    path('faq', faq, name="faq"),
 
 ]
